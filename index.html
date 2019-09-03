@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/pg-principal.css">
+    <title>LEMA</title>
+</head>
+<body onload="$(document).ready(function(){$('div.ensino').show(),$('div.sobre').hide(),$('div.pesquisa').hide();}); visitado('ensino');">
+    <div class="wrapper">
+        <div class="banner">
+
+            <div class="left"></div>
+
+            <div class="right"></div>
+            
+            <div class="center">
+                <div class="img-header"></div>
+                <div class="titulo">
+                    <h3> LEMA - LABORATÓRIO DE ENGENHARIA DE MEIO AMBIENTE </h3>
+                </div>
+            </div>
+            
+        </div>
+
+         <div class="nav">
+            <nav class="menu">
+                <input type="checkbox" name="btn-menu" id="btn-menu">
+                <label for="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i> Menu</label>
+                <ul>
+                    <li onclick="visitado('sobre'); resetaListas();"><a href="#" id="sobre" class="trocabg">Sobre</a></li>
+                    <li onclick="visitado('ensino');"><a href="#" id="ensino" class="trocabg">Ensino</a></li>
+                    <li onclick="visitado('pesquisa');"><a href="#" id="pesquisa" class="trocabg">Pesquisa</a></li>
+                    <li onclick="visitado('extensao');"><a href="#" id="extensao" class="trocabg">Extensão</a></li>
+                </ul>
+            </nav>
+            <div class="horizontal"></div>
+        </div>
+
+        <div class="ensino">
+            <div class="titulo-op"><h3>ENSINO</h3></div>
+            <div class="opcoes">
+                <a href="./agendarAula.php">
+                    <div class="op" onmouseover="trocaImg('calendar','./img/calendar-blue.png');" onmouseout="trocaImg('calendar','./img/calendar-black.png');">
+                        <div class="img">
+                            <i><img id="calendar" src="./img/calendar-black.png" alt="Calendario"></i>
+                        </div>
+                        <h4>Agendar Aula</h4>
+                    </div>
+                </a>
+                
+                <a href="./consultarAgendamento.php">
+                    <div class="op" onmouseover="trocaImg('search','./img/search-blue.png');" onmouseout="trocaImg('search','./img/search-black.png');">
+                        <div class="img">
+                            <i><img id="search" src="./img/search-black.png" alt="Search"></i>
+                        </div>
+                        <h4>Consultar Agendamentos</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="sobre">
+            <div class="titulo-sobre"><h3>Sobre</h3></div>
+            <div class="conteudo">
+                <div class="card">
+                    <div class="titulo-card"><h3>VISÃO GERAL</h3></div>
+                    <div class="conteudo-card">
+                            O Laboratório de Engenharia do Meio Ambiente (LEMA) é um órgão do Centro de Tecnologia dedicado ao ensino de graduação e pós-graduação, 
+                            pesquisas de impacto regional, nacional e internacional, além de projetos de extensão em parceria com órgãos públicos e privados.
+                            <br><br>
+                            As atividades do LEMA são relacionadas aos diversos compartimentos do meio-ambiente, sendo que as águas subterrâneas e superficiais, o solo e 
+                            a vegetação merecem destaque. O LEMA realizada estudos que visam avaliar e compreender o impacto das atividades humanas na qualidade e na 
+                            quantidade dos recursos naturais disponíveis. Busca, ainda, propor alternativas inovadoras que diminuam o impacto das ações antrópicas no 
+                            meio-ambiente e contribuam para o desenvolvimento sustentável.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="titulo-card"><h3>ESTRUTURA</h3><h5>(Clique sobre a opção desejada)</h5></div>
+                    <div class="conteudo-card">
+                        <ul>
+                            <li onclick="exibeLista('safq');">
+                                <b>Setor de Análises Físico-Químicas</b><i class="fas fa-caret-right"></i>
+                                <ul id="safq">
+                                    <li>O Setor de Análises Físico-Químicas realiza ensaios em águas subterrâneas e superficiais, efluentes domésticos e industriais, divididos em 4 categorias:</li>
+                                    <li><b>a) Parâmetros Gravimétricos</b>: Determinação de sólidos totais, sólidos dissolvidos totais, sólidos suspensos totais, sólidos fixos e voláteis e sólidos sedimentáveis.</li>
+                                    <li><b>b) Parâmetros Físicos</b>: Determinação da temperatura, pH, cor, turbidez e condutividade.</li>
+                                    <li><b>c) Parâmetros Químicos Titulométricos</b>: Determinação da DQO (demanda química de oxigênio), acidez, alcalinidade e dureza.</li>
+                                    <li><b>d) Parâmetros Químicos Cromatográficos</b>: Determinação de fluoreto, cloreto, brometo, nitrito, nitrato, fosfato e sulfato via cromatografia iônica.</li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('sm');">
+                                <b>Setor de Microbiologia</b><i class="fas fa-caret-right"></i>
+                                <ul id="sm">
+                                    <li>
+                                        O Setor de Microbiologia realiza os seguintes ensaios em águas subterrâneas e superficiais, efluentes 
+                                        domésticos e industriais: Determinação da DBO (demanda bioquímica de oxigênio), determinação de coliformes 
+                                        totais e determinação de coliformes termotolerantes.
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('sp');">
+                                <b>Setor de Processos</b><i class="fas fa-caret-right"></i>
+                                <ul id="sp">
+                                    <li>
+                                        O Setor de Processos destina-se a investigação de parâmetros de controle em operações unitárias visando, principalmente, o tratamento de águas, 
+                                        efluentes líquidos e lodos industriais. O laboratório possui equipamentos de separação de fases (sedimentação, filtração, osmose reversa, flotação a ar dissolvido) 
+                                        em regimes contínuo e descontínuo. O laboratório possui capacidade para estudos de transferência de fase em regime contínuo e descontínuo para polimento de efluentes industriais; 
+                                        estudos de oxidação química via Processos Oxidativos Avançados (incluso reator para fotólise); e estudos de adensamento e tratamento de lodos.
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('shh');">
+                                <b>Setor de Hidrometria e Hidrossedimentometria</b><i class="fas fa-caret-right"></i>
+                                <ul id="shh">
+                                    <li>
+                                        As atividades realizadas no Setor de Hidrometria e Hidrossedimentometria envolvem as 
+                                        medições de vazões líquidas para estabelecimento da curva chave, além do monitoramento 
+                                        da precipitação, nível de água, descarga e concentração de sólidos em suspensão. 
+                                        As medições de descarga líquida são realizadas com o método volumétrico, flutuadores, 
+                                        dispositivos regulares (vertedores e calhas), molinetes hidrométricos e equipamentos 
+                                        acústicos. As descargas sólidas são estimadas por meio de coletas em campo com 
+                                        amostradores de sedimentos e análises laboratoriais destas amostras.
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('smfh');">
+                                <b>Setor de Mecânica dos Fluidos e Hidráulica</b><i class="fas fa-caret-right"></i>
+                                <ul id="smfh">
+                                    <li>
+                                        O Setor de Mecânica dos Fluidos e Hidráulica conta com um reservatório de 130 m³ que abastece um circuito 
+                                        fechado para escoamento em canal. Conta também com caixas calibradas e canais de retorno. O canal tem 
+                                        capacidade de circulação de uma vazão de até 1 m³.s-1, com medição feita através de vertedouro e de até 0,5 m³.s-1, 
+                                        com medição volumétrica de vazão na caixa calibrada. 
+                                        <br>
+                                        Atualmente encontra-se com o canal e as caixas calibradas em operação, equipado com bomba IMBIL, tipo 250 290, 1750 RPM, 
+                                        vazão: 300 m³.h-1 e inversor de frequência que possibilita o seu funcionamento com diferentes vazões.  
+                                        <br>
+                                        O laboratório conta ainda com bancadas para ensaio de bombas centrífugas, Turbinas Pelton e Francis, e de turbina tipo 
+                                        Hélice Reversível (água), para estudo de perda de carga em líquidos em movimento (água) e de Hidráulica; condutos forçados e 
+                                        canais (água).
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('logistica');">
+                                <b>Setor de Logística</b><i class="fas fa-caret-right"></i>
+                                <ul id="logistica">
+                                    <li>
+                                        O Setor de Logística objetiva assessorar e viabilizar as atividades de coletas e de deslocamento de equipamentos, alunos e 
+                                        funcionários no trabalho de campo, ou seja, em áreas externas ao LEMA. Atualmente este setor possui dois veículos, uma Fiat 
+                                        Doblô com capacidade para 7 pessoas e uma Wolksvagem Kombi, com capacidade de transportar até 8 pessoas, além de um barco de 
+                                        alumínio com motor de 15 hp e um reboque para auxílio no transporte de equipamentos.
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('sgeoproc');">
+                                <b>Setor de Geoprocessamento</b><i class="fas fa-caret-right"></i>
+                                <ul id="sgeoproc">
+                                    <li>
+                                    O Setor de Geoprocessamento realiza atividades junto a entidades públicas e privadas, estudos e soluções de questões técnicas na 
+                                    área de engenharia do meio ambiente, tais como: levantamentos topográficos, desenvolvimento de sistemas de informações geográficas 
+                                    e aplicação de ferramentas de análise espacial para os mais diversos problemas ambientais.
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('seip');">
+                                <b>Setor de Ecotecnologias e Instalações Prediais</b><i class="fas fa-caret-right"></i>
+                                <ul id="seip">
+                                    <li>
+                                        O Setor de Ecotecnologias e Instalações Prediais se destina ao desenvolvimento de atividades voltadas às tecnologias inovadoras, 
+                                        com vistas à sustentabilidade em áreas urbanas e rurais, incluindo a infraestrutura verde (telhados verdes, biorretenções, 
+                                        pavimentos permeáveis, brises vegetais, entre outros) com foco no controle do escoamento pluvial, conforto térmico e acústico,
+                                        além de técnicas para a captação, aproveitamento e tratamento das águas da chuva, utilização de resíduos para a produção de novos
+                                        materiais e utilização de fontes energéticas alternativas.
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('sgrh');">
+                                <b>Setor de Gestão dos Recursos Hídricos</b><i class="fas fa-caret-right"></i>
+                                <ul id="sgrh">
+                                    <li>
+                                    O setor de Gestão dos Recursos Hídricos realiza atividades junto a entidades públicas e privadas, estudos e soluções de questões 
+                                    técnicas na área de engenharia do meio ambiente, tais como: aplicação e desenvolvimento de metodologias para os instrumentos de 
+                                    gestão de recursos hídricos: Planos de Recursos Hídricos; Enquadramento dos corpos de água; Outorga dos direitos de uso de 
+                                    recursos hídricos; Cobrança pelo uso de recursos hídricos; e Sistema de Informações sobre Recursos Hídricos.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="titulo-card"><h3>RECURSOS HUMANOS</h3><h5>(Clique sobre a opção desejada)</h5></div>
+                    <div class="conteudo-card">
+                        <ul id="rh">
+                            <li onclick="exibeLista('dirlema');">
+                                <b>Direção do LEMA</b><i class="fas fa-caret-right"></i>     
+                                <ul id="dirlema">
+                                    <li><div class="imagem-serv"><img src="./img/franciscoforgiarini.jpg" alt="Francisco Forgiarini"></div>Prof. Francisco Rossarolla Forgiarini – Diretor do LEMA (<a target="_blank" href="http://lattes.cnpq.br/0895218743375105">Lattes</a>)</li>
+                                    <li><div class="imagem-serv"><img src="./img/luisclaussen.jpeg" alt="Luis Claussen"></div>Técnico Luís Evandro Claussen – Diretor Substituto do LEMA (<a target="_blank" href="http://lattes.cnpq.br/3786491089951064">Lattes</a>)</li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('safqmp');">
+                                <b>Setores de Análises Físico-Químicas, de Microbiologia e de Processos</b><i class="fas fa-caret-right"></i>
+                                <ul id="safqmp">
+                                    <li><div class="imagem-serv"><img src="./img/thiagoformentini.jpeg" alt="Thiago Formentini"></div>Técnico Thiago Augusto Formentini - Gerente Técnico (<a target="_blank" href="http://lattes.cnpq.br/9356089824069393">Lattes</a>)</li>
+                                    <li><div class="imagem-serv"><img src="./img/elviscarissimi.jpeg" alt="Elvis Carissimi"></div>Prof. Elvis Carissimi - Gerente Técnico Substituto (<a target="_blank" href="http://lattes.cnpq.br/4642912749433316">Lattes</a>)</li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('smfhl');">
+                                <b>Setores de Mecânica dos Fluidos e Hidráulica, de Hidrometria e Hidrossedimentometria e de Logística</b><i class="fas fa-caret-right"></i>
+                                <ul id="smfhl">
+                                    <li><div class="imagem-serv"><img src="./img/joaofrancisco.jpeg" alt="João Francisco"></div>Prof. João Francisco Carlexo Horn - Gerente Técnico (<a target="_blank" href="http://lattes.cnpq.br/1128389630553783">Lattes</a>)</li>
+                                    <li>Técnico Fabio Sebastian Oliveira França - Gerente Técnico Substituto</li>
+                                </ul>
+                            </li>
+
+                            <li onclick="exibeLista('sgegr');">
+                                <b>Setores de Geoprocessamento, de Ecotecnologias e Instalações Prediais e de Gestão dos Recursos Hídricos</b><i class="fas fa-caret-right"></i>
+                                <ul id="sgegr">
+                                    <li><div class="imagem-serv"><img src="./img/danielpiccilli.jpeg" alt="Daniel Piccilli"></div>Prof. Daniel Allasia Piccilli - Gerente Técnico (<a target="_blank" href="http://lattes.cnpq.br/3977491475717786">Lattes</a>)</li>
+                                    <li><div class="imagem-serv"><img src="./img/rutineiatassi.jpeg" alt="Rutinéia Tassi"></div>Profa. Rutinéia Tassi – Gerente Técnica Substituta (<a target="_blank" href="http://lattes.cnpq.br/75847433">Lattes</a>)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="titulo-card"><h3>LOCALIZAÇÃO</h3></div>
+                    <div class="conteudo-card">
+                            O Laboratório de Engenharia do Meio Ambiente (LEMA) está localizado no Campus Sede da Universidade Federal de Santa Maria 
+                            (UFSM), em Santa Maria - RS.
+                            <br><br>
+                            <b>Endereço do LEMA</b>:<br>
+                            Av. Roraima nº 1000<br>
+                            Prédio 10 – Sala 442<br>
+                            Cidade Universitária<br>
+                            Santa Maria - RS<br> 
+                            CEP: 97105-900<br>
+                            <br>
+                            O mapa abaixo mostra a localização do LEMA no campus da UFSM, em relação a prédios de referência como o Hospital 
+                            Universitário (HUSM), Centro de Tecnologia (CT), Instituto Nacional de Pesquisas Espaciais (INPE) e Banco do Brasil (BB)
+                            <br><br>
+                            <img class="mapa" src="./img/mapa.png" alt="mapa">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="pesquisa">
+            <div class="titulo-op"><h3>PESQUISA</h3></div>
+            <div class="opcoes">
+                <a href="#">
+                    <div class="op">
+                        <div class="img">
+                            <i><img id="calendar" src="./img/calendar-black.png" alt="Calendario"></i>
+                        </div>
+                        <h4>Exemplo 1</h4>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="op">
+                        <div class="img">
+                            <i><img id="calendar" src="./img/calendar-black.png" alt="Calendario"></i>
+                        </div>
+                        <h4>Exemplo 2</h4>
+                    </div>
+                </a>
+            </div>
+        </div> -->
+
+        <footer>
+            <h4>Av. Roraima, 1000, CT Lab - prédio 10 - sala 442</h4>
+            <h4>(55) 3220-8786</h4>
+            <h4>lema@ufsm.br</h4>
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/5cd09c3eca.js"></script>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        //Altera para a div sobre
+        $(document).ready(function(){
+            $("a#sobre").click(function(e){
+                e.preventDefault();
+                $("div.sobre").show(),
+                $("div.ensino").hide(),
+                $("div.pesquisa").hide();
+            })
+        })
+
+        //Altera para a div ensino
+        $(document).ready(function(){
+            $("a#ensino").click(function(e){
+                e.preventDefault();
+                $("div.ensino").show(),
+                $("div.sobre").hide(),
+                $("div.pesquisa").hide();
+            });
+        });
+   
+        //Altera para a div pesquisa
+        // $(document).ready(function(){
+        //     $("a#pesquisa").click(function(e){
+        //         e.preventDefault();
+        //         $("div.sobre").hide(),
+        //         $("div.ensino").hide(),
+        //         $("div.pesquisa").show();
+        //     });
+        // });
+
+        //Altera para a div extensão
+
+        //Troca a cor de fundo da opção clicada no menu 
+        function visitado(id){
+            var a = document.getElementsByClassName("trocabg");
+            for(let i=0; i < a.length; i++){
+                if(a[i].id == id){
+                    a[i].style.backgroundColor="rgba(22,32,109,.4)";
+                } else{
+                    a[i].style.backgroundColor="transparent";
+                }
+            }
+        }
+
+        //Troca a imagem das opções de ensino, pesquisa e extensão
+        function trocaImg(id,imagem){
+            document.getElementById(id).src=imagem;
+        }
+
+        //Altera a lista sendo exibida em sobre 
+        function exibeLista(idlista){
+            var disparadoPor = document.getSelection();
+            var listas = new Array(document.getElementById('safq').id,
+            document.getElementById('sm').id,
+            document.getElementById('sp').id,
+            document.getElementById('shh').id,
+            document.getElementById('smfh').id,
+            document.getElementById('logistica').id,
+            document.getElementById('sgeoproc').id,
+            document.getElementById('seip').id,
+            document.getElementById('sgrh').id,
+            document.getElementById('dirlema').id,
+            document.getElementById('safqmp').id,
+            document.getElementById('smfhl').id,
+            document.getElementById('sgegr').id);
+
+            for(let i = 0; i < listas.length; i++){
+                if(listas[i] == idlista){
+                    // $('#'+idlista).find('i.fas').addClass('fa-caret-down');
+                    // $('#'+idlista).find('i').removeClass('fas fa-caret-right');
+                    if(document.getElementById(idlista).style.display == "none"){
+                        document.getElementById(idlista).style.display = "block";
+                        $("#"+idlista).parent().find($(".fas")).removeClass('fa-caret-right').addClass('fa-caret-down');
+                    } else{
+                        document.getElementById(idlista).style.display = "none";
+                        $("#"+listas[i]).parent().find($(".fas")).removeClass('fa-caret-down').addClass('fa-caret-right');
+                    }     
+                } 
+            }
+            //listas = null;
+        }
+
+        function resetaListas(){
+            var listas = new Array(document.getElementById('safq').id,
+            document.getElementById('sm').id,
+            document.getElementById('sp').id,
+            document.getElementById('shh').id,
+            document.getElementById('smfh').id,
+            document.getElementById('logistica').id,
+            document.getElementById('sgeoproc').id,
+            document.getElementById('seip').id,
+            document.getElementById('sgrh').id,
+            document.getElementById('dirlema').id,
+            document.getElementById('safqmp').id,
+            document.getElementById('smfhl').id,
+            document.getElementById('sgegr').id);
+
+            for(let i = 0; i < listas.length; i++){
+                document.getElementById(listas[i]).style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

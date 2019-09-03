@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    max-width: 90%;
+    margin: 0px auto;
+    background-color: white;
+    box-shadow: 3px 2px 5px #808080;
+}
+
+/* Formatação do Banner*/
+.banner{
+    max-width: 100%;
+    height: 152px;
+    background-color: rgb(22,32,109);
+    clear: both;
+    border-bottom: 2px solid #CD6600;
+}
+
+.banner .center{
+    max-width: 50%;
+    height: 152px;
+    margin: 0px auto;
+}
+
+.banner .center .img-header {
+    max-width: 50%;
+    height: 125px;
+    background-image: url(../img/logo_lema.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0px auto;
+}
+
+.banner .center .titulo{
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    font-size: 72%;
+}
+
+.banner .left{
+    float: left;
+    width: 25%;
+    height: 152px;
+    background-image: url(../img/logo-ufsm-branco-500.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.banner .right{
+    float: right;
+    width: 25%;
+    height: 152px;
+    background-image: url(../img/logo-ct-editado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+.outer-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.container{
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content{
+    width: 80%;
+    margin: 7px;
+    text-align: center;
+}
+
+.content span, input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.content span{
+    font-size: 15pt;
+}
+
+.content input{
+    border: 1px solid black;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.botoes{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+.botoes input{
+    width: 150px;
+    margin: 8px;
+    border-radius: 10px;
+    font-size: 12pt;
+    cursor: pointer;
+    color: white;
+    border: 1px solid black;
+}
+
+.botoes input#aceitar-aula{
+    background-color: green;
+}
+
+.botoes input#recusar-aula{
+    background-color: red;
+}
+
+.botoes input#aceitar-aula:hover{
+    border: 1px solid green;
+    box-shadow: 2px 0px 3px darkgreen;
+}
+
+.botoes input#recusar-aula:hover{
+    border: 1px solid red;
+    box-shadow: 2px 0px 3px darkred;
+}
+
+@media only screen and (max-width:980px){
+    .banner .left{
+        background-size: 90%;
+    }
+
+    .banner .right{
+        background-size: 65%;
+    }
+
+    .banner .center .img-header{
+        background-size: 70%;
+    }
+
+    .banner .center .titulo{
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width:675px){
+    .wrapper{
+        min-width: 360px;
+        /* height: 800px; */
+    }
+
+    .banner .left{
+        float: right;
+    }
+
+    .banner .center{
+        position: relative;
+        margin: 0;
+    }
+
+    .banner .center .img-header{
+        width: 50%;
+        height: 150px;
+        float: right;
+    }
+
+    .banner .center .titulo{
+        position: absolute;
+        width: 50%;
+        height: 40px;
+        top: 53px;
+        font-size: 8px;
+    }
+
+    .outer-container{
+        flex-wrap: wrap;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .content span{
+        font-size: 14pt;
+    }
+}

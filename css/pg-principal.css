@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color:#DCDCDC;
+}
+
+.wrapper{
+    max-width: 90%;
+    margin: 0px auto;
+    background-color: white;
+    box-shadow: 3px 2px 5px #808080;
+}
+
+/* Formatação do Banner*/
+.banner{
+    max-width: 100%;
+    height: 152px;
+    background-color: rgb(22,32,109);
+    clear: both;
+    border-bottom: 2px solid #CD6600;
+}
+
+.banner .center{
+    max-width: 50%;
+    height: 152px;
+    margin: 0px auto;
+}
+
+.banner .center .img-header {
+    max-width: 50%;
+    height: 125px;
+    background-image: url(../img/logo_lema.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0px auto;
+}
+
+.banner .center .titulo{
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    font-size: 72%;
+}
+
+.banner .left{
+    float: left;
+    width: 25%;
+    height: 152px;
+    background-image: url(../img/logo-ufsm-branco-500.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.banner .right{
+    float: right;
+    width: 25%;
+    height: 152px;
+    background-image: url(../img/logo-ct-editado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+/* Formatação do Menu de Navegação */
+.nav{
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+input#btn-menu{
+    display: none;
+}
+
+.nav .menu label{
+    width: 70px;
+    display: none;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: left;
+    color: #000;
+}
+
+.nav .menu ul li{
+    display: inline-block;
+    margin: 10px;
+    list-style-type: none;
+}
+
+ .nav .menu ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    font-size: 13pt;
+    text-transform: uppercase;
+    transition: .3s;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.nav .menu ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    background-color: rgb(22, 32, 109);
+    transition: transform .3s;
+    transform-origin: right;
+    transform: scaleX(0); 
+    z-index: -1;
+}
+
+.nav .menu ul li a:hover{
+    color: white;
+}
+
+.nav .menu ul li a:hover:before{
+    transition: transform .3s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.horizontal{
+    min-width: 65%;
+    height: 3px;
+    margin-top: 25px; 
+    border-bottom: 1px solid #CD6600;
+} 
+
+/* FORMATAÇÃO DA ABA SOBRE */
+.sobre{
+    width: 80%;
+    margin: 20px auto;
+    color: #000;
+    text-align: center;
+}
+
+.titulo-sobre{
+    font-size: 18pt;
+}
+
+.conteudo{
+    margin: 15px auto;
+    text-align: left;
+}
+
+.titulo-card{
+    height: 30px;
+    line-height: 30px;
+    font-size: 13pt;
+    color: rgb(0, 28, 54);
+    background-color: #5B9BD5;
+}
+
+.titulo-card h3, .titulo-card h5{
+    float: left;
+}
+
+.conteudo-card{
+    margin: 10px auto;
+    text-align: justify;
+    font-size: 13pt;
+}
+
+.conteudo-card ul{
+    list-style: none;
+}
+
+.conteudo-card ul li{
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.conteudo-card .imagem-serv img{
+    width: 100%;
+}
+
+.conteudo-card ul li i{
+    margin-left: 5px;
+    font-size: 14pt;
+}
+
+.conteudo-card ul li ul{
+    margin-left: 80px;
+    
+}
+
+.conteudo-card #rh li ul li{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.conteudo-card .imagem-serv{
+    display: inline-block;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.conteudo-card ul li ul li a{
+    color: rgb(3, 58, 109);
+}
+
+.conteudo-card ul li ul li a:hover{
+    text-shadow: 1px 1px 4px rgb(3, 58, 109);
+}
+
+.conteudo-card .mapa {
+    width: 60%;
+    margin: 10px 19%;
+}
+
+/* FORMATAÇÃO DAS OPÇÕES DO MENU ENSINO */
+.ensino{
+    max-width: 50%;
+    height: 150px;
+    margin: 120px auto 45px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgb(22, 32, 109);
+    border-radius: 60px;
+}
+
+/* FORMATAÇÃO DAS OPÇÕES DO MENU PESQUISA */
+.pesquisa{
+    max-width: 50%;
+    height: 150px;
+    margin: 120px auto 45px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgb(22, 32, 109);
+    border-radius: 60px;
+}
+
+.titulo-op{
+    margin-top: -67px;
+    font-size: 16pt;
+    color: #000;
+}
+
+.opcoes{
+    width: 100%;
+    margin-top: 32px;
+    height: 150px;
+    
+}
+
+.opcoes a{
+    margin: 20px auto;
+}
+
+
+/* FORMATAÇÃO GERAL DAS OPÇÕES */
+.op {
+    position: relative;
+    min-width: 29%;
+    display: inline-block;
+    margin: 25px 10px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    box-shadow: 5px 5px 15px #000;
+    background-color: #fff;
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.op h4{
+    margin-top: 9px;
+}
+
+.img{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 100%;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.img i img{
+    padding: 12px;
+}
+
+.op:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.op:after{
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: 0;
+    height: 4px;
+    width: 100%;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+
+.op:hover{
+    color: rgb(22,32,109);
+}
+
+.op:hover .img{
+    border-color: rgb(22,32,109);
+}
+
+.op:hover:before{
+    border-color: rgb(22,32,109);
+    height: 100%;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .3s transform linear, .3s height linear .3s ;
+    -moz-transition: .3s transform linear, .3s height linear .3s ;
+    -ms-transition: .3s transform linear, .3s height linear .3s ;
+    -o-transition: .3s transform linear, .3s height linear .3s ;
+    transition: .3s transform linear, .3s height linear .3s ;
+}
+
+.op:hover:after{
+    border-color: rgb(22,32,109);
+    height: 100%;
+    right: -0.1%;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .3s transform linear, .3s height linear .3s ;
+    -moz-transition: .3s transform linear, .3s height linear .3s ;
+    -ms-transition: .3s transform linear, .3s height linear .3s ;
+    -o-transition: .3s transform linear, .3s height linear .3s ;
+    transition: .3s transform linear, .3s height linear .3s ;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(22, 32, 109);
+    box-shadow: 3px 2px 5px #808080;
+}
+
+@media only screen and (max-width:980px){
+    .banner .left{
+        background-size: 90%;
+    }
+
+    .banner .right{
+        background-size: 65%;
+    }
+
+    .banner .center .img-header{
+        background-size: 70%;
+    }
+
+    .banner .center .titulo{
+        font-size: 9px;
+    }
+
+    .nav .menu ul li{
+        margin: 5px;
+    }
+
+    .nav .menu ul li a{
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .titulo-op{
+        font-size: 14pt;
+    }
+
+    .ensino, .pesquisa{
+        height: 300px;
+    }
+
+    .opcoes{
+        width: 90px;
+        height: 300px;
+        margin: 38px auto;
+    }
+
+    .op{
+        font-size: 10pt;      
+        float: left;
+        width: 130px;
+        margin: 35px auto 0 -33px;
+    }
+
+    footer{
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width:720px){
+    .nav .menu ul li a{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width:675px){
+    .wrapper{
+        min-width: 360px;
+        /* height: 800px; */
+    }
+
+    .banner .left{
+        float: right;
+    }
+
+    .banner .center{
+        position: relative;
+        margin: 0;
+    }
+
+    .banner .center .img-header{
+        width: 50%;
+        height: 150px;
+        float: right;
+    }
+
+    .banner .center .titulo{
+        position: absolute;
+        width: 50%;
+        height: 40px;
+        top: 53px;
+        font-size: 8px;
+    }
+
+    .nav .menu label{
+        display: block;
+    }
+
+    .nav .menu ul{
+        display: none;
+        margin-top: 10px;
+    }
+
+    .nav .menu ul li{
+        float: left;
+        width: 100%;
+    }
+
+    .nav .menu ul li a{
+        padding: 5px;
+    }
+
+    .horizontal{
+        clear: both;
+    }
+
+    .nav #btn-menu:checked ~ label{
+        margin: 0 5px;
+    }
+
+    .nav #btn-menu:checked ~ ul{
+        display: block;
+        margin-top: -80px;
+    }
+
+    .conteudo-card .mapa{
+        width: 90%;
+        margin: 10px 7%;
+    }
+}
+
+

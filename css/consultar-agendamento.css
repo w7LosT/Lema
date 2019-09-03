@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color:#DCDCDC;
+    color: black;
+}
+
+.wrapper{
+    max-width: 90%;
+    margin: 0px auto;
+    background-color: white;
+    box-shadow: 3px 2px 5px #808080;
+}
+
+/* Formatação do Banner*/
+.banner{
+    max-width: 100%;
+    height: 152px;
+    background-color: rgb(22,32,109);
+    clear: both;
+    border-bottom: 2px solid #CD6600;
+}
+
+.banner .center{
+    max-width: 50%;
+    height: 152px;
+    margin: 0px auto;
+}
+
+.banner .center .img-header {
+    max-width: 50%;
+    height: 125px;
+    background-image: url(../img/logo_lema.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0px auto;
+}
+
+.banner .center .titulo{
+    text-align: center;
+    color: white;
+    font-size: 72%;
+}
+
+.banner .left{
+    float: left;
+    width: 25%;
+    height: 152px;
+    background-image: url(../img/logo-ufsm-branco-500.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.banner .right{
+    float: right;
+    width: 25%;
+    height: 152px;
+    background-image: url(../img/logo-ct-editado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Formatação do Formulário */
+.main{
+    max-width: 90%;
+    margin: 55px auto;
+    /* border: 1px solid red; */
+}
+
+.main button.voltar{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(22,32,109,.6);
+    border: none;
+    border-radius: 10px;
+}
+
+.main button.voltar a{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.main button.voltar a i{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main button.voltar:hover{
+    background-color: rgba(191, 109, 15, .8);
+    box-shadow: 1px 1px 4px rgba(191, 109, 15, .8);
+}
+
+.main h3{
+    margin-top: -30px;
+    margin-bottom: 40px; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabela table{
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    background-color: rgba(22,32,109,.8);
+    color: white;
+}
+
+.tabela table tr td{
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid black;
+
+}
+
+.finalizar{
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 10px; 
+    background-color: rgba(22,32,109,.6);
+}
+
+.finalizar a{
+    color: white;
+    padding: 5px;
+    font-size: 13pt;
+}
+
+/* fieldset{
+    border-radius: 25px;
+}
+
+fieldset legend{
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+.calendario-outer{
+    float: left;
+    width: 50%;
+    margin: 43px auto 77px;
+    text-align: center;
+} */
+
+.calendario{
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.calendario .mes{
+    display: none;
+}
+
+.calendario td{
+    height: 100px;
+    padding: 3px;
+    background-color: #ededed;
+    /* cursor: pointer; */
+}
+
+.td-relative{
+    position: relative;
+    max-width: 0;
+}
+
+.calendario .dia-consulta{
+    display: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 1px solid blue;
+}
+
+.calendario label{
+    position: absolute;
+    top: 40px;
+    left: 43%;
+    /* width: 100%; */
+    /* height: 30px; */
+    /* line-height: 30px; */
+    /* padding: 0px; */
+    /* margin: 0px !important; */
+    background-color: transparent;
+    color: rgba(0,0,0,.5);
+    font-size: 14pt;
+    border: none;
+    /* cursor: pointer; */
+}
+
+.calendario label:hover{
+    color: black;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+    font-size: 18pt;
+    z-index: 60;
+}
+
+.calendario #ant, #prox{
+    position: absolute;
+    top: 1px;
+    padding: 5px 8px;
+    font-size: 12px;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #fff, #ccc);
+    border: 1px solid #ccc;
+}
+
+.calendario #ant{
+    left: 3px;
+}
+
+.calendario #prox{
+    right: 3px;
+}
+
+.calendario #ant:hover, #prox:hover{
+    background: linear-gradient(bottom, #ccc, #fff, 130%);
+}
+
+.aula{
+    position: relative;
+    max-width: 98%;
+    float: left;
+    /* top: 5px; */
+    margin: 5px 0 5px 0;
+    white-space: nowrap; 
+    overflow: hidden;
+    font-size: 8pt;
+    text-align: left;
+    border: 1px solid green;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.aula span{
+    display: inline-block;
+    padding-left: 100%;
+    animation: aula 10s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes aula{
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+@media screen and (max-width:930px){
+    .banner .left{
+        background-size: 90%;
+    }
+
+    .banner .right{
+        background-size: 65%;
+    }
+}
+
+@media screen and (max-width:710px){
+    .wrapper{
+        min-width: 360px;
+        height: auto;
+    }
+
+    .banner .left{
+        float: right;
+    }
+
+    .banner .center{
+        position: relative;
+        margin: 0;
+    }
+
+    .banner .center .img-header{
+        width: 50%;
+        height: 150px;
+        float: right;
+    }
+
+    .banner .center .titulo{
+        position: absolute;
+        width: 50%;
+        height: 40px;
+        top: 53px;
+        font-size: 8px;
+    }
+
+    .main h3{
+        font-size: 14px;
+    }
+
+    .calendario{
+        font-size: 11pt;
+    }
+
+    .calendario-outer{
+        width: 100%;
+    } 
+
+    .calendario{
+        width: 320px;
+    }
+}
