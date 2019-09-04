@@ -1,5 +1,4 @@
 <?php
-    //ob_start();
     echo basename( __FILE__ );
 ?>
 
