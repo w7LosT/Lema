@@ -1,0 +1,29 @@
+Deixar que o professor digite o semestre ou reconhecer automaticamente qual o semestre atual? Se for para reconhecer automaticamente, como sei quando muda o semestre para a ufsm? Essa mudança ocorre em períodos iguais todo ano?
+não importa, os dados devem ser guardados por 5 anos
+
+
+Os dados da tabela aulasMinistradas são sensíveis? Se sim, devo criar uma página exclusiva para a administração? (Se sim, gerará outra tabela com os dados dos administradores.) Se não, como esses dados serão acessados? Esses dados devem ser guardados por algum tempo? 
+não são sensíveis, deve ser criada uma terceira opção de relatórios na aba ENSINO
+
+Os dados da tabela aulasMinistradas devem ser separados por aula? O número de alunos por aula isolada importa?
+Ex.: setor x, disciplina y, data da aula, número de alunos, semestre, ano
+Ou devem ser separados por setor e disciplina, não importando o número de alunos por aula, mas sim no semestre como um todo. Ou seja, a cada aula que for agendada, será somado o número de alunos da mesma ao número de aluno total do semestre registrado no banco.
+Ex.: setor a, disciplina b, número de alunos total do semestre, semestre, ano
+
+criar uma única tabela para guardar as aulas, cada aula deve ter um status "agendada" ou "executada"
+
+Nas opções de setor, curso, o usuário só pode marcar uma opção?
+sim
+
+Para quais email serão enviadas as solicitações de agendamento? deve haver distinção de emails entre setores, cursos, disciplinas?
+
+toda aula marcada deve ser mandada para o lema@ufsm.br, mais email do gerente técnico e gerente técnico substituto
+o setor de sedimentrometria deve cair no mesmo email de apoio logístico
+
+
+Existe a possibilidade de a aula agendada ser cancelada ou alterada? existe um prazo de antecedência para solicitar o agendamento, o cancelamento ou a alteração? Deve ser requerida uma confirmação tanto do coordenador quanto do professor que fasrá a solicitação? O siape dos professores é público?
+
+as alterações ou cancelamentos devem ser realizados pelo menos 1 dia antes
+
+consultar agendamentos deve conter um calendário gigante com as aulas em cada dia separadas por cor, quando clicado sobre uma aula, deve aparecer um formulário para que sejam alterados os seus dados. deve ser enviado um email em caso de modificação ou exclusão. 24h antes da aula, a edição ou exclusão deve ser bloqueada, porém a aula deve estar visível.
+

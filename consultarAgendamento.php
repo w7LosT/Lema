@@ -37,6 +37,19 @@
 
             <h3>CONSULTAR AGENDAMENTOS</h3>
 
+            <div class="box">
+                <div class="box-setor">
+                    <label for="drop-setor">Setor:</label>
+                    <select name="#" id="drop-setor">
+                        <option value="#">-- Selecione um setor --</option>                    
+                        <option value="option-1">Sedimentometria e Hidromentria</option>
+                        <option value="option-2">Apoio Logístico Para Saída de Campo</option>
+                        <option value="option-3">Análises Físico-Químicas</option>
+                        <option value="option-4">Mecânica dos Fluidos e Hidráulica</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="calendario">
                 <?php montaCalendarioConsulta();?>
             </div>

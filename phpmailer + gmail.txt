@@ -1,0 +1,40 @@
+/* 
+	Baixar phpmailer np github e extrair para dentro da pasta do projeto
+*/
+require_once('path/phpmailerAutoload.php');
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->SMTPOptions = array( 'ssl'=>array(
+	'verify_peer'=>false,
+	'verify_peer_name'=>false,
+	'allow_self_signed'=>true
+) );
+
+//Debug para informar erros
+$mail->SMTPDebug=2; //0-nada 1-msg cliente 2 - msg cliente e servidor 3-tudo
+
+//host
+$mail->Host = "smtp.gmail.com";
+
+//tipo de proteção
+$mail->SMTPSecure = "tls;
+
+//Porta
+$mail->Port = 587;
+
+//Autenticação
+$mail->SMTPAuth = true;
+
+//Detalhes da conta de email
+$mail->Username = 'emailorigem@gmail.com';
+$mail->Password = 'senha para logar no email';
+//Detalhes do email
+$mail->setFrom('emailorigem@gmail.com', 'nome remetente');
+$mail->addAddress('emaildestino@email.com');
+$mail->Subject = 'Assunto do email';
+$mail->Body = 'Link para a página de confirmação da aula';
+
+//mensagem de envio ou erro
+if(!$mail->send()){
+	echo '<script> alert('Erro ao enviar o email para o técnico'); </script>';
+}

@@ -35,27 +35,32 @@
 
             <button class="voltar"><a href="./index.html"><i class="fas fa-arrow-left"></i></a></button>
 
-            <h3>AGENDAR AULAS</h3>
+            <h3>AGENDAR USO DE VEÍCULOS</h3>
 
             <div class="vertical-right"></div>
             
             <div class="vertical-left"></div>
 
             <form action="index.php" method="post" id="formulario">
-                <div class="left-outer">
-
-                    <div class="left-inner">
-                        <label class="ident" for="prof">Orientador/Responsável</label>
-                        <input type="text" name="prof" id="prof" placeholder="Ex.: Maria A. Pereira" pattern="[a-zA-Z.\s]+" title="Apenas letras, espaços ou .">
-                    </div>
-
-                    <div class="left-inner">
-                        <label class="ident" for="emailProf">E-mail do Orientador</label>
-                        <input type="email" name="emailProf" id="emailProf" placeholder="Ex.: Contato@email.com">
-                    </div>
+                <div class="reponsavel">
+                    <fieldset>
+                        <legend>Dados do Orientador/Responsável</legend>
+                        <div class="left-outer">
+                            <div class="left-inner">
+                                <label class="ident" for="prof">Orientador/Responsável</label>
+                                <input type="text" name="prof" id="prof" placeholder="Ex.: Maria A. Pereira" pattern="[a-zA-Z.\s]+" title="Apenas letras, espaços ou .">
+                            </div>
+                        </div>
+                        <div class="right-outer">
+                            <div class="right-inner">
+                                <label class="ident" for="emailProf">E-mail do Orientador</label>
+                                <input type="email" name="emailProf" id="emailProf" placeholder="Ex.: Contato@email.com">
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
 
-                <div class="right-outer">
+                <!-- <div class="right-outer">
                     <div class="right-inner">
                         <label class="ident" for="cnhSolic">CNH do Solicitante</label>
                         <input type="text" name="cnhSolic" id="cnhSolic" placeholder="Número da CNH" pattern="[0-9]+" title="Apenas Números">
@@ -71,22 +76,83 @@
                         <input type="text" name="cnhValidade" id="cnhValidade" placeholder="Validade da CNH">
                     </div>
 
+                </div> -->
+
+                <div class ="solicitante" style="clear:left;">
+                    <fieldset>
+                        <legend>Dados do Solicitante</legend>
+                        <div class="left-outer">
+                            <div class="left-inner">
+                                <label class="ident" for="nomeSolicitante">Nome</label>
+                                <input type="text" name="nomeSolicitante" id="nomeSolicitante" placeholder="Ex.: Maria A. Pereira" pattern="[a-zA-Z.\s]+" title="Apenas letras, espaços ou .">
+                            </div>
+
+                            <div class="left-inner">
+                                <label class="ident" for="emailSolicitante">Email</label>
+                                <input type="email" name="emailSolicitante" id="emailSolicitante" placeholder="Ex.: Contato@email.com">
+                            </div>
+                        </div>
+
+                        <div class="right-outer">
+                            <div class="right-inner">
+                                <label class="ident" for="cnhSolic">CNH do Solicitante</label>
+                                <input type="text" name="cnhSolic" id="cnhSolic" placeholder="Número da CNH" pattern="[0-9]+" title="Apenas Números">
+                            </div>
+
+                            <div class="right-inner">
+                                <label class="ident" for="cnhcat">Categoria</label>
+                                <input type="text" name="cnhCat" id="cnhCat" pattern="[a-eA-E]" placeholder="Categoria da CNH">
+                            </div>
+
+                            <div class="right-inner">
+                                <label class="ident" for="cnhValidade">Validade</label>
+                                <input type="date" name="cnhValidade" id="cnhValidade" placeholder="Validade da CNH">
+                            </div>
+                        </div>     
+                    </fieldset>
                 </div>
+
+                <!-- <div class="veiculo">
+                    <fieldset>
+                        <legend>Informações da Rota</legend>
+                        <div class="left-outer">
+                            <div class="left-inner">
+                                <label class="ident" for="itinerario">Itinerário</label>
+                                <input type="text" name="itinerario" id="itinerario" placeholder="Informe seu destino" checked>
+                            </div>
+                        </div>
+                        <div class="right-outer">
+                            <div class="right-inner">
+                                <label class="ident" for="descricao">Descrição</label>
+                                <input type="text" name="descricao" id="descricao" checked>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div> -->
 
                 <div class="veiculo">
                     <fieldset>
                         <legend>Veículo</legend>
-                        <label for="veiculo">Veículo</label>
-                        <select name="veiculo" id="veiculo">
-                            <option value=""></option>
-                        </select>
-
-                        <label for="placa">Placa</label>
-                        <input type="text" name="placa" id="placa" disabled>
+                        <div class="left-outer">
+                            <div class="left-inner">
+                                <label class="ident" for="veiculo">Veículo</label>
+                                <select name="veiculo" id="veiculo">
+                                    <option value="">-- Selecione um veículo --</option>
+                                    <option value="">Carro</option>
+                                    <option value="">Caminhão</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-outer">
+                            <div class="right-inner">
+                                <label class="ident" for="placa">Placa</label>
+                                <input type="text" name="placa" id="placa">
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
 
-                <div class="right-outer hora">
+                <div class="right-outer hora" style="margin-top:40px">
                     <div class="right-inner">
                         <label class="ident" for="horainicio">Horário de Início</label>
                         <select name="horainicio" id="horainicio">
@@ -203,18 +269,20 @@
                     <legend>TERMO DE RESPONSABILIDADE</legend>
                     <ul class="termo-resp">
                         <li>Este termo de responsabilidade demonstra o compromisso do usuário na utilização dos
-                        laboratórios para fins didáticos do Laboratório de Engenharia do Meio Ambiente (LEMA).
-                        O usuário que aceita esse termo de responsabilidade se compromete a:</li>
+                        veículos do Laboratório de Engenharia do Meio Ambiente (LEMA). 
+                        O usuário que assina esse termo de responsabilidade se compromete a:</li>
                         
-                        <li>− Cumprir os horários de funcionamento do laboratório (8:30h às 17:30h);</li>
-                        <li>− Utilizar o laboratório apenas no horário preestabelecido no presente agendamento;</li>
-                        <li>− Não exceder a quantidade de alunos especificada no presente agendamenti, respeitando a
-                        capacidade máxima de lotação do laboratório;</li>
-                        <li>− Zelar pelas boas condições do laboratório, devolvendo-o, ao final das atividades, nas mesmas
-                        condições de início;</li>
-                        <li>− Comunicar ao Gerente Técnico qualquer irregularidade encontrada no laboratório;</li>
-                        <li>− Procurar o Gerente Técnico para esclarecimentos referentes a qualquer dúvida técnica,
-                        organizacional ou prática do laboratório.</li>
+                        <li>− Ter Carteira Nacional de Habilitação na categoria exigida pelos órgãos fiscalizadores de
+                        transito para o tipo de automóvel em questão, e saber manusear o veículo em questão;</li>
+                        <li>− Fazer uma condução responsável e segura, respeitando todas as regras gerais de
+                        trânsito e limites de velocidade;</li>
+                        <li>− Responsabilizar-se por todas as multas incorridas por infrações de trânsito cometidas;</li>
+                        <li>− Utilizar o veículo apenas para os fins descritos no presente documento;</li>
+                        <li>− Retirar e devolver o veículo no prazo preestabelecido pelo presente documento;</li>
+                        <li>− Zelar pelas boas condições do veículo;</li>
+                        <li>− Abastecer o veículo com a quantidade (estimada) de combustível consumida;</li>
+                        <li>− Devolver o veículo nas mesmas condições e estado de conservação do ato de retirada,
+                        responsabilizando-se por todos os danos provocados no automóvel por utilização indevida.</li>
                     </ul>
 
                     <div class="aceito">

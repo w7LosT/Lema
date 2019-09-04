@@ -315,6 +315,7 @@ body{
 
 fieldset{
     border-radius: 25px;
+    margin-bottom: 20px;
 }
 
 fieldset legend{

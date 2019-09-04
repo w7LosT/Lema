@@ -2,7 +2,7 @@
     /* Este arquivo trata todas as requisições feitas pelo site */
 
     include 'conexao.php';
-    // include 'enviaEmail.php';
+    include 'enviaEmail.php';
 
     if(isset($_POST['enviarAula'])){
         $monitor = 'Não Necessário';
@@ -16,8 +16,7 @@
             $tecnico = $_POST['tecnico'];
         }
         $emailsDestino = buscaEmailsTecnicos($_POST['setor']);
-        $nomePag = $_POST['setor']."-".$_POST['dia']."-".$_POST['horainicio']."-".$_POST['horafinal'];
-        enviaEmailTecnico($_POST['emailProf'], $_POST['prof'], $emailsDestino, "Agendamento de Aula", "aceitarAula-".$nomePag.".php");
+        // enviaEmailTecnico($_POST['emailProf'], $_POST['prof'], $emailsDestino, "Agendamento de Aula", );
         //mensagem de envio ou erro
         /*if(){
             echo '<script> alert("Erro ao enviar o email para o técnico"); </script>';

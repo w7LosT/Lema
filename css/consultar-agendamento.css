@@ -108,10 +108,34 @@ body{
 }
 
 .main h3{
-    margin-top: -30px;
+    margin-top: -20px;
     margin-bottom: 40px; 
     text-align: center;
     font-weight: bold;
+
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(22,32,109);
+}
+
+.main .box{
+    width: 100%;
+    height: 50px;
+    background-color: #f3f3f3;
+    border:1px solid #b3b3b3;
+    border-radius: 10px;
+    box-shadow: 0.2rem 0.2rem 0.25px rgba(0,0,0,0.15);
+    color: #4d4d4d;
+}
+
+.main .box .box-setor{
+    margin-left: 10px;
+}
+
+.main .box .box-setor #drop-setor{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 .tabela table{
@@ -323,4 +347,6 @@ fieldset legend{
     .calendario{
         width: 320px;
     }
+
+    
 }

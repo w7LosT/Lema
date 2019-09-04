@@ -3,7 +3,7 @@
     function getConnection(){
         $dsn = 'pgsql:host=127.0.0.1;dbname=lema;';
         $user = 'postgres';
-        $pass = '#Sootario1';
+        $pass = 'leonardo1';
         try{
             $con = new PDO($dsn, $user, $pass);
             

@@ -34,7 +34,15 @@
 
             <button class="voltar"><a href="./index.html"><i class="fas fa-arrow-left"></i></a></button>
 
-            <h3>CONSULTAR AGENDAMENTOS</h3>
+            <h3 class="titulo-pag">CONSULTAR AGENDAMENTOS</h3>
+
+            <div class="box">
+
+                <div>
+                    <span class="titulo-box">Setor:</span>
+                </div>
+
+            </div>
 
             <div class="tabela">
                 <table>
