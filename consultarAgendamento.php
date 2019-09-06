@@ -40,12 +40,12 @@
             <div class="box">
                 <div class="box-setor">
                     <label for="drop-setor">Setor:</label>
-                    <select name="#" id="drop-setor">
-                        <option value="#">-- Selecione um setor --</option>                    
-                        <option value="option-1">Sedimentometria e Hidromentria</option>
-                        <option value="option-2">Apoio Logístico Para Saída de Campo</option>
-                        <option value="option-3">Análises Físico-Químicas</option>
-                        <option value="option-4">Mecânica dos Fluidos e Hidráulica</option>
+                    <select name="drop-setor" id="drop-setor">
+                        <option value="nada-selecionado">-- Selecione um setor --</option>                    
+                        <option value="Sedimentometria e Hidromentria">Sedimentometria e Hidromentria</option>
+                        <option value="Apoio Logístico Para Saída de Campo">Apoio Logístico Para Saída de Campo</option>
+                        <option value="Análises Físico-Químicas">Análises Físico-Químicas</option>
+                        <option value="Mecânica dos Fluidos e Hidráulica">Mecânica dos Fluidos e Hidráulica</option>
                     </select>
                 </div>
             </div>
@@ -158,6 +158,45 @@
                 }
             })
         });
+
+        $("#drop-setor").click(function(event){
+            var dataaux = new Date(data.getFullYear(), mesAtual, 0);
+            var diasMesAtual = dataaux.getDate();
+            var mesAtualBanco;
+            if(mesAtual < 10){
+                mesAtualBanco = "0"+mesAtual;
+            } else{
+                mesAtualBanco = mesAtual;
+            }
+            $.ajax({
+                type: "POST",
+                url: "index.php",
+                data: { dropsetor : $("#drop-setor").val()},
+                success: function(setor){
+                    $result = JSON.parse(setor);
+                    $(".td-relative").children(".aula").remove();
+                    for(let i = 1; i <= diasMesAtual; i++){
+                        if(i < 10){
+                            dataaux2 = anoAtual+"-"+mesAtualBanco+"-0"+i;
+                        } else{
+                            dataaux2 = anoAtual+"-"+mesAtualBanco+"-"+i;
+                        }
+                        for(let j = 0; j < result.length; j++){
+                            if(result[j].dataaula == dataaux2){
+                                var nomeSetorAux = result[j].nomesetor.split(" ").join("");
+                                var idAux = "'"+i+""+mesAtual+"_"+nomeSetorAux+"'";
+                                if((document.getElementById(idAux)) == null){
+                                    $("input#"+i+"-"+mesAtual).parent().prepend('<div class="aula '+nomeSetorAux+'" id="'+idAux+'" onclick="dadosAulas('+idAux+')"><span>'+result[j].nomesetor+'</span></div>');
+                                }
+                            }
+                        }
+                    }
+                },
+                error: function(erro){
+
+                }
+            });
+
 
         function dadosAulas(id){
             console.log(id);

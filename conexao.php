@@ -169,3 +169,14 @@
             return $stmt->execute();
     }
 
+    //Buscando data das aulas para o setor selecionado
+    function selectSetor($setor) {
+        $setorSelect = strtoupper($setor);
+        $con = getConnection();
+        $query = "SELECT dataaula FROM aulasministradas WHERE nomesetor = :setor";
+        $stmt = $con->prepare($query);
+        $stmt->bindParam(':setor', $setorSelect);
+        $result = $stmt->fetchAll();
+        return json_encode($result);
+    }
+

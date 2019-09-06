@@ -46,4 +46,11 @@
         } else {
             echo '<script> alert("Erro ao recusar a aula.); </script>';
         }    
+    } else if(isset($_POST['dropsetor'])){
+        $dropsetor = $_POST['dropsetor'];
+        if($dropsetor == "nada-selecionado"){
+            echo '<script> alert("Erro, selecione algum setor.); </script>';
+        } else {
+            selectSetor($dropsetor);
+        }
     }
